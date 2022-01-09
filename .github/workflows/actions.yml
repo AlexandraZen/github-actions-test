@@ -1,0 +1,15 @@
+name: Actions Workflows
+
+on: [push]
+
+jobs: 
+  run-github-actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Action simple Javascript
+        id: salutation
+        uses:  actions/hello-world-javascript-action@v1.1
+        with: 
+          who-to-greet : "Mina the octocat"
+      - name: Afficher l'heure de salutation
+        run: echo "${{ steps.salutation.outputes.time }}"

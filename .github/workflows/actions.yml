@@ -12,4 +12,4 @@ jobs:
         with: 
           who-to-greet : "Mina the octocat"
       - name: Afficher l'heure de salutation
-        run: echo "${{ steps.salutation.outputes.time }}"
+        run: echo "${{ steps.salutation.outputs.time }}"
